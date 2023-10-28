@@ -15,11 +15,13 @@ struct Employee {
 
 class EmployeeMatcher {
   func employeesWithCommonProjects(employees: [Employee]) -> [Employee] {
-    let projectIDs = employees.flatMap { $0.projects }
+    let projectIDs: [Int] = employees.flatMap { $0.projects }
     let groups = Dictionary(grouping: projectIDs, by: { $0 })
     let duplicates: [Int] = Array(groups.filter { $1.count > 1 }.keys)
 
-    let filtered = employees.filter { $0.projects.contains(duplicates) }
+    let filtered = employees.filter { $0.projects.contains { element in
+      return duplicates.contains(element)
+    }}
 
     return filtered
   }
@@ -28,7 +30,7 @@ class EmployeeMatcher {
 final class EmployeesTests: XCTestCase {
 
   func testLoadDataExtractsEmployeePairWithCommonProjects() {
-    let employees = testEmployees()
+    let employees = testEmployeesSinglePair()
     let sut = EmployeeMatcher()
 
     let employeesWithCommonProjects = sut.employeesWithCommonProjects(employees: employees)
@@ -38,13 +40,36 @@ final class EmployeesTests: XCTestCase {
     XCTAssertEqual(employeesWithCommonProjects[1].id, 113)
   }
 
-  private func testEmployees() -> [Employee] {
+    func testLoadDataExtractsMultipleEmployeePairsWithCommonProjects() {
+      let employees = testEmployeesMultiplePair()
+      let sut = EmployeeMatcher()
+  
+      let employeesWithCommonProjects = sut.employeesWithCommonProjects(employees: employees)
+  
+      XCTAssertEqual(employeesWithCommonProjects.count, 4)
+      XCTAssertEqual(employeesWithCommonProjects[0].id, 143)
+      XCTAssertEqual(employeesWithCommonProjects[1].id, 218)
+      XCTAssertEqual(employeesWithCommonProjects[2].id, 113)
+      XCTAssertEqual(employeesWithCommonProjects[3].id, 55)
+    }
+
+  private func testEmployeesSinglePair() -> [Employee] {
     [
       .init(id: 143, projects: [10, 22]),
       .init(id: 218, projects: [12, 9]),
       .init(id: 113, projects: [10, 17]),
       .init(id: 67, projects: [33]),
       .init(id: 55, projects: [8])
+    ]
+  }
+
+  private func testEmployeesMultiplePair() -> [Employee] {
+    [
+      .init(id: 143, projects: [10, 22]),
+      .init(id: 218, projects: [12, 9]),
+      .init(id: 113, projects: [10, 17]),
+      .init(id: 67, projects: [33]),
+      .init(id: 55, projects: [8, 9])
     ]
   }
 }

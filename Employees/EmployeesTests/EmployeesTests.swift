@@ -8,7 +8,7 @@
 import XCTest
 @testable import Employees
 
-struct Employee {
+struct Employee: Equatable {
   let id: Int
   let projects: [Int]
 }
@@ -32,25 +32,26 @@ final class EmployeesTests: XCTestCase {
   func testLoadDataExtractsEmployeePairWithCommonProjects() {
     let employees = testEmployeesSinglePair()
     let sut = makeSUT()
+    let expectedEmployees = [Employee(id: 143, projects: [10, 22]), Employee(id: 113, projects: [10, 17])]
 
-    let employeesWithCommonProjects = sut.employeesWithCommonProjects(employees: employees)
+    let actualEmployees = sut.employeesWithCommonProjects(employees: employees)
 
-    XCTAssertEqual(employeesWithCommonProjects.count, 2)
-    XCTAssertEqual(employeesWithCommonProjects[0].id, 143)
-    XCTAssertEqual(employeesWithCommonProjects[1].id, 113)
+    XCTAssertEqual(expectedEmployees, actualEmployees)
   }
 
     func testLoadDataExtractsMultipleEmployeePairsWithCommonProjects() {
       let employees = testEmployeesMultiplePair()
       let sut = makeSUT()
+      let expectedEmployees = [
+        Employee(id: 143, projects: [10, 22]), 
+        Employee(id: 218, projects: [12, 9]),
+        Employee(id: 113, projects: [10, 17]),
+        Employee(id: 55, projects: [8, 9])
+      ]
 
-      let employeesWithCommonProjects = sut.employeesWithCommonProjects(employees: employees)
-  
-      XCTAssertEqual(employeesWithCommonProjects.count, 4)
-      XCTAssertEqual(employeesWithCommonProjects[0].id, 143)
-      XCTAssertEqual(employeesWithCommonProjects[1].id, 218)
-      XCTAssertEqual(employeesWithCommonProjects[2].id, 113)
-      XCTAssertEqual(employeesWithCommonProjects[3].id, 55)
+      let actualEmployees = sut.employeesWithCommonProjects(employees: employees)
+
+      XCTAssertEqual(expectedEmployees, actualEmployees)
     }
 
   private func makeSUT() -> EmployeeMatcher {

@@ -31,7 +31,7 @@ final class EmployeesTests: XCTestCase {
 
   func testLoadDataExtractsEmployeePairWithCommonProjects() {
     let employees = testEmployeesSinglePair()
-    let sut = EmployeeMatcher()
+    let sut = makeSUT()
 
     let employeesWithCommonProjects = sut.employeesWithCommonProjects(employees: employees)
 
@@ -42,8 +42,8 @@ final class EmployeesTests: XCTestCase {
 
     func testLoadDataExtractsMultipleEmployeePairsWithCommonProjects() {
       let employees = testEmployeesMultiplePair()
-      let sut = EmployeeMatcher()
-  
+      let sut = makeSUT()
+
       let employeesWithCommonProjects = sut.employeesWithCommonProjects(employees: employees)
   
       XCTAssertEqual(employeesWithCommonProjects.count, 4)
@@ -52,6 +52,10 @@ final class EmployeesTests: XCTestCase {
       XCTAssertEqual(employeesWithCommonProjects[2].id, 113)
       XCTAssertEqual(employeesWithCommonProjects[3].id, 55)
     }
+
+  private func makeSUT() -> EmployeeMatcher {
+    return .init()
+  }
 
   private func testEmployeesSinglePair() -> [Employee] {
     [

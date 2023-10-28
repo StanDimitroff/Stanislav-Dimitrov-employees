@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "A33EB5DC-5EFB-47F1-B466-03315EF50A90",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Employees.xcodeproj",
+          "identifier" : "44B37FAB2AECFBD50053428C",
+          "name" : "Employees"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Employees.xcodeproj",
+      "identifier" : "44B37FAB2AECFBD50053428C",
+      "name" : "Employees"
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Employees.xcodeproj",
+        "identifier" : "44B37FBB2AECFBD70053428C",
+        "name" : "EmployeesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

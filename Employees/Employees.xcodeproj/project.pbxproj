@@ -14,6 +14,8 @@
 		44B37FDB2AEE78910053428C /* RecordMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FDA2AEE78910053428C /* RecordMatcher.swift */; };
 		44B37FDD2AEE78C20053428C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FDC2AEE78C20053428C /* Record.swift */; };
 		44B37FDF2AEE78DD0053428C /* DateProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FDE2AEE78DD0053428C /* DateProcessor.swift */; };
+		44B37FE32AEE80110053428C /* CSVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FE22AEE80110053428C /* CSVParserTests.swift */; };
+		44B37FE42AEE84DF0053428C /* records.csv in Resources */ = {isa = PBXBuildFile; fileRef = 44B37FE02AEE7A880053428C /* records.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		44B37FDA2AEE78910053428C /* RecordMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMatcher.swift; sourceTree = "<group>"; };
 		44B37FDC2AEE78C20053428C /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		44B37FDE2AEE78DD0053428C /* DateProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProcessor.swift; sourceTree = "<group>"; };
+		44B37FE02AEE7A880053428C /* records.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = records.csv; sourceTree = "<group>"; };
+		44B37FE22AEE80110053428C /* CSVParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +96,9 @@
 		44B37FBF2AECFBD70053428C /* EmployeesTests */ = {
 			isa = PBXGroup;
 			children = (
+				44B37FE02AEE7A880053428C /* records.csv */,
 				44B37FC02AECFBD70053428C /* EmployeesTests.swift */,
+				44B37FE22AEE80110053428C /* CSVParserTests.swift */,
 			);
 			path = EmployeesTests;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B37FE42AEE84DF0053428C /* records.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B37FC12AECFBD70053428C /* EmployeesTests.swift in Sources */,
+				44B37FE32AEE80110053428C /* CSVParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

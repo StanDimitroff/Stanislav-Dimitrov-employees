@@ -11,10 +11,15 @@ final class CSVParser {
 
   let dateProcessor = DateProcessor()
 
-  func loadFile(from url: URL) -> String? {
-    let csvData = try? String(contentsOf: url, encoding: .utf8)
+  func loadFileData(from url: URL) -> String? {
+    if url.startAccessingSecurityScopedResource() {
+      let csvData = try? String(contentsOf: url, encoding: .utf8)
+      url.stopAccessingSecurityScopedResource()
 
-    return csvData
+      return csvData
+    }
+
+    return nil
   }
 
   func parse(csvData: String) -> [Record] {

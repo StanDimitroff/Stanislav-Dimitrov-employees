@@ -13,14 +13,14 @@ final class CSVParserTests: XCTestCase {
   func testLoadFileFromURLReturnsFileData() {
     let sut = CSVParser()
 
-    let csvData = sut.loadFile(from: fileURL())
+    let csvData = sut.loadFileData(from: fileURL())
 
     XCTAssertNotNil(csvData)
   }
 
   func testParseCSVDataReturnsRecords() {
     let sut = CSVParser()
-    let csvData = sut.loadFile(from: fileURL())!
+    let csvData = sut.loadFileData(from: fileURL())!
 
     let actualRecords = sut.parse(csvData: csvData)
 

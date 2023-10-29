@@ -18,7 +18,7 @@ final class EmployeesModel: ObservableObject {
   }
 
   func loadCSVFile(from url: URL) {
-    guard let fileData = csvParser.loadFile(from: url) else { return }
+    guard let fileData = csvParser.loadFileData(from: url) else { return }
     let records = csvParser.parse(csvData: fileData)
 
     self.records = records

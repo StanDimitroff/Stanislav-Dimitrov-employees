@@ -41,7 +41,7 @@ final class EmployeesTests: XCTestCase {
   }
 
   private func createDateIntervals() -> [DateInterval] {
-    let processor = DateProcessor()
+    let processor = DateProcessor(dateFormat: "yyyy-MM-dd")
     let dates = [
       (start: "2009-01-01", end: "2011-04-27"),
       (start: "2012-05-18", end: "2012-05-20"),

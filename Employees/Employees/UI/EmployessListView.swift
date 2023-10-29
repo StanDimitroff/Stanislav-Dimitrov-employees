@@ -67,5 +67,5 @@ struct EmployessListView: View {
 }
 
 #Preview {
-  EmployessListView(model: .init(csvParser: CSVParser(), recordMatcher: RecordMatcher()))
+  EmployessListView(model: .init(csvParser: CSVParser(parsingDateFormat: ""), recordMatcher: RecordMatcher()))
 }

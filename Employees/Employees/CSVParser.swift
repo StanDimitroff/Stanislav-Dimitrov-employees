@@ -9,7 +9,15 @@ import Foundation
 
 final class CSVParser {
 
-  let dateProcessor = DateProcessor()
+  private let parsingDateFormat: String
+
+  private lazy var dateProcessor: DateProcessor = {
+    DateProcessor(dateFormat: parsingDateFormat)
+  }()
+  
+  init(parsingDateFormat: String) {
+    self.parsingDateFormat = parsingDateFormat
+  }
 
   func loadFileData(from url: URL) -> String? {
     if url.startAccessingSecurityScopedResource() {

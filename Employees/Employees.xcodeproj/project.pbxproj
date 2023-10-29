@@ -19,6 +19,7 @@
 		44B37FE82AEE98DB0053428C /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FE72AEE98DB0053428C /* CSVParser.swift */; };
 		44B37FEA2AEE9AA40053428C /* EmployessListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FE92AEE9AA40053428C /* EmployessListView.swift */; };
 		44B37FED2AEE9B720053428C /* EmployeesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FEC2AEE9B720053428C /* EmployeesModel.swift */; };
+		44B37FEF2AEEE2590053428C /* RecordPresentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B37FEE2AEEE2590053428C /* RecordPresentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		44B37FE72AEE98DB0053428C /* CSVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		44B37FE92AEE9AA40053428C /* EmployessListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployessListView.swift; sourceTree = "<group>"; };
 		44B37FEC2AEE9B720053428C /* EmployeesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesModel.swift; sourceTree = "<group>"; };
+		44B37FEE2AEEE2590053428C /* RecordPresentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPresentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				44B37FE92AEE9AA40053428C /* EmployessListView.swift */,
 				44B37FEC2AEE9B720053428C /* EmployeesModel.swift */,
 				44B37FB32AECFBD70053428C /* Assets.xcassets */,
+				44B37FEE2AEEE2590053428C /* RecordPresentModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				44B37FEA2AEE9AA40053428C /* EmployessListView.swift in Sources */,
 				44B37FDF2AEE78DD0053428C /* DateProcessor.swift in Sources */,
 				44B37FED2AEE9B720053428C /* EmployeesModel.swift in Sources */,
+				44B37FEF2AEEE2590053428C /* RecordPresentModel.swift in Sources */,
 				44B37FB22AECFBD50053428C /* ContentView.swift in Sources */,
 				44B37FDD2AEE78C20053428C /* Record.swift in Sources */,
 				44B37FB02AECFBD50053428C /* EmployeesApp.swift in Sources */,

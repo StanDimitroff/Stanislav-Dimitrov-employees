@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-      EmployessListView(model: EmployeesModel(csvParser: .init()))
+      EmployessListView(model: EmployeesModel(csvParser: .init(), recordMatcher: .init()))
     }
 }
 

@@ -30,6 +30,7 @@
 		44B37FB32AECFBD70053428C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44B37FBC2AECFBD70053428C /* EmployeesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B37FC02AECFBD70053428C /* EmployeesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesTests.swift; sourceTree = "<group>"; };
+		44B37FD92AED54200053428C /* Employees.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Employees.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		44B37FA32AECFBD50053428C = {
 			isa = PBXGroup;
 			children = (
+				44B37FD92AED54200053428C /* Employees.xctestplan */,
 				44B37FAE2AECFBD50053428C /* Employees */,
 				44B37FBF2AECFBD70053428C /* EmployeesTests */,
 				44B37FAD2AECFBD50053428C /* Products */,
